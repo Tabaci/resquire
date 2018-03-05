@@ -58,7 +58,7 @@ sent to the `require` function, multiple modules may be loaded and utilized at
 the same time:
 
 ```javascript
-const [start, end, put] = require('^tokens/{if, else}')
+const [if, else] = require('^tokens/{if, else}')
 ```
 
 The array returned is filled from left to right from the inputs acquired in the 
