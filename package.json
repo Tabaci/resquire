@@ -1,22 +1,30 @@
 {
   "name": "resquire",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allows for more complex requires, making Node requires feel more like importing with namespaces as seen in other languages.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }, 
+  },
   "repository": {
-    "type": "git", 
+    "type": "git",
     "url": "https://github.com/Tabaci/resquire.git"
-  }, 
+  },
   "bugs": {
     "url": "https://github.com/Tabaci/resquire/issues"
-  }, 
-  "keywords": ["require", "root", "caret", "nesting", "nested", "namespace", "resolve"], 
+  },
+  "keywords": [
+    "require",
+    "root",
+    "caret",
+    "nesting",
+    "nested",
+    "namespace",
+    "resolve"
+  ],
   "author": "Alexander Hållenius",
   "license": "ISC",
-  "homepage": "https://github.com/Tabaci/resquire", 
+  "homepage": "https://github.com/Tabaci/resquire",
   "dependencies": {
     "closest-root": "^1.0.1"
   }
