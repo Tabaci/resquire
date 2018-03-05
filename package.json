@@ -16,8 +16,8 @@
   "keywords": ["require", "root", "caret", "nesting", "nested", "namespace", "resolve"], 
   "author": "Alexander Hållenius",
   "license": "ISC",
+  "homepage": "https://github.com/Tabaci/resquire", 
   "dependencies": {
     "closest-root": "^1.0.1"
-  },
-  "homepage": "https://github.com/Tabaci/resquire"
+  }
 }
