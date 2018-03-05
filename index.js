@@ -1,3 +1,9 @@
+/**
+ * Due to the way Node manages modules, the functionality inside this file will 
+ * only ever be run once, even if a user decides to require 'resquire' more than 
+ * once.
+ */
+
 'use strict'
 
 let path = require('path')
