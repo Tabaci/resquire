@@ -58,7 +58,7 @@ sent to the `require` function, multiple modules may be loaded and utilized at
 the same time:
 
 ```javascript
-const [if, else] = require('^tokens/{if, else}')
+const [hello, goodbye] = require('^greetings/{hello, goodbye}')
 ```
 
 The array returned is filled from left to right from the inputs acquired in the 
@@ -69,7 +69,7 @@ files.
 Furthermore, this feature can be nested:
 
 ```javascript
-const [if, else, extends] = require('^tokens/{control/{if, else}, template/extends}')
+const [hello, goodbye, bye] = require('^greetings/{sincere/{hello, goodbye}, insincere/bye}')
 ```
 
 As such, all files needed can theoretically be required at the same time, even 
