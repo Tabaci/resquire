@@ -5,10 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  }, 
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/Tabaci/resquire.git"
+  }, 
+  "bugs": {
+    "url": "https://github.com/Tabaci/resquire/issues"
+  }, 
+  "keywords": ["require", "root", "caret", "nesting", "nested", "namespace", "resolve"], 
   "author": "Alexander Hållenius",
   "license": "ISC",
   "dependencies": {
     "closest-root": "^1.0.1"
-  }
+  },
+  "homepage": "https://github.com/Tabaci/resquire"
 }
