@@ -1,0 +1,14 @@
+{
+  "name": "resquire",
+  "version": "1.0.0",
+  "description": "Allows for more complex requires, making Node requires feel more like importing with namespaces as seen in other languages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Hållenius",
+  "license": "ISC",
+  "dependencies": {
+    "closest-root": "^1.0.1"
+  }
+}
