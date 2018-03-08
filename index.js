@@ -10,9 +10,9 @@ let path = require('path')
 let closestRoot = require('closest-root')
 let Module = require('module')
 
-// Original versions of the modified methods
-let originalRequire = Module.prototype.require
-let originalResolveFilename = Module._resolveFilename
+// Private (original) versions of the modified methods
+let _require = Module.prototype.require
+let _resolveFilename = Module._resolveFilename
 
 /**
  * Modified version of require that allows multiple files located in the same 
@@ -60,7 +60,7 @@ Module.prototype.require = function (requirePath)
 		return requiredModules
 	}
 	else
-		return originalRequire.apply(this, arguments)
+		return _require.apply(this, arguments)
 	
 }
 
@@ -120,6 +120,23 @@ Module._resolveFilename = function (
 		
 		// Root directory
 		let rootDir = closestRoot(requiredFromDir)
+		let rootAppend = ''
+		
+		// Attempt to load configuration
+		try
+		{
+			let resquireConfig = require(rootDir + '/resquire.json')
+			
+			rootAppend = resquireConfig.root || ''
+		}
+		catch(err) {
+			if (err.code !== 'MODULE_NOT_FOUND')
+				throw err
+			
+			rootAppend = ''
+		}
+		
+		rootDir = path.join(rootDir, rootAppend)
 		
 		// Resolve path relative to root directory
 		let requirePath = path.resolve(rootDir, requiredFile)
@@ -131,5 +148,5 @@ Module._resolveFilename = function (
 		return requirePath
 	}
 	else
-		return originalResolveFilename.apply(this, arguments)
+		return _resolveFilename.apply(this, arguments)
 }

@@ -77,6 +77,33 @@ though it most certainly would make a mess of things.
 
 The braces can be used with a require that does not use the '^' (caret) feature.
 
+### Modifying the Root Directory
+
+Sometimes it might be necessary to change the root directory for required that 
+the ^ (caret) operator requires files from: for instance when writing tests, it 
+might be better to separate the files so that source code goes under a `lib/` 
+directory and tests goes under a `test/` directory.
+
+Normally, the root of the project would be where the `package.json` file is 
+located:
+
+```javascript
+const file = require('^file')
+```
+
+On the other hand, if that file we are trying to require is located under the 
+`lib/` directory, we can go ahead and add a file called `resquire.json` to the 
+root of our application (next to the `package.json` file):
+
+```json
+{
+	"root": "lib"
+}
+```
+
+Using the require function as above, the file will be required as `^lib/file` 
+rather than as `^file`.
+
 ## License
 
 This module, and the code therein, is licensed under ISC.
