@@ -79,10 +79,10 @@ The braces can be used with a require that does not use the '^' (caret) feature.
 
 ### Modifying the Root Directory
 
-Sometimes it might be necessary to change the root directory for required that 
+Sometimes it might be necessary to change the root directory that 
 the ^ (caret) operator requires files from: for instance when writing tests, it 
 might be better to separate the files so that source code goes under a `lib/` 
-directory and tests goes under a `test/` directory.
+directory whilst tests go under a `test/` directory.
 
 Normally, the root of the project would be where the `package.json` file is 
 located:
