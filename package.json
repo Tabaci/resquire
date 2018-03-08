@@ -1,6 +1,6 @@
 {
   "name": "resquire",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Allows for more complex requires, making Node requires feel more like importing with namespaces as seen in other languages.",
   "main": "index.js",
   "scripts": {
